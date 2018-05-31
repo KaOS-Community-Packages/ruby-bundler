@@ -13,6 +13,7 @@ sha256sums=('3bb53e03db0a8008161eb4c816ccd317120d3c415ba6fee6f90bbc7f7eec8690')
 _gemfile="bundler-${pkgver}.gem"
 
 package() {
+	local _gd="$(gem environment gemdir)"
 	gem install \
 		-i "${pkgdir}/${_gd}" \
 		-n "${pkgdir}/usr/bin" \
